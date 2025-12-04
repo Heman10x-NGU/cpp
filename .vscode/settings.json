@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "iosfwd": "cpp",
+        "chrono": "cpp",
+        "span": "cpp",
+        "complex": "cpp",
+        "iostream": "cpp"
+    }
+}
