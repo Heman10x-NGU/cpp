@@ -33,7 +33,7 @@ LinkedIn:// \href{https://www.linkedin.com/in/heman10x/}{\bf heman10x} \\
 GitHub:// \href{https://github.com/Heman10x-NGU}{\bf Heman10x-NGU} \\
 LeetCode:// \href{https://leetcode.com/Heman10x/}{\bf Heman10x} \\
 \sectionsep
-
+\vspace{0.5cm}
 \section{Technical Skills}
 \subsection{Languages}
 Java \textbullet{} Golang \textbullet{} C++ \\
@@ -56,7 +56,7 @@ Prometheus \textbullet{} Grafana \textbullet{} Temporal
 \subsection{Databases}
 MongoDB \textbullet{} MySQL \textbullet{} PostgreSQL
 \sectionsep
-
+\vspace{0.5cm}
 \section{Achievements}
 \textbf{Rank 599} - LeetCode Weekly Contest 473 \\[3pt]
 \textbf{Specialist} - Codeforces (Rating: 1484+) \\[3pt]
@@ -66,10 +66,6 @@ MongoDB \textbullet{} MySQL \textbullet{} PostgreSQL
 \textbf{1st Rank} - Web 3.0 Track, HACK GDSC 2.0 \\[3pt]
 \sectionsep
 
-\section{Interests}
-Distributed Systems \textbullet{} Backend Infrastructure \\
-Reliability Engineering \textbullet{} Performance Optimization \\
-Scalable System Design
 
 
 \end{minipage}%
@@ -87,11 +83,11 @@ Scalable System Design
 \location{July 2024 – Present | Pune, India}
 \vspace{\topsep}
 \begin{tightemize}
-\item Architected Kafka-based event streaming pipeline in Golang/Java processing \textbf{50K+ messages/sec} with goroutine worker pools, implementing effectively-once processing using Redis-backed idempotency for \textbf{\$50B+ daily} collateral movements
-\item Developed distributed collateral optimization engine using \textbf{Temporal.io workflows} in Golang orchestrating 100+ fund optimizations with saga patterns and automatic failure recovery achieving \textbf{99.9\% completion rate}
-\item Produced real-time financial dashboard with Redis caching in Golang reducing API latency from 500ms to \textbf{40ms}, aggregating projected earnings and allocation efficiency metrics for \$50B+ AUM across 500+ funds
-\item Architected ETL data pipeline with 20+ scheduled jobs using cron and goroutine worker pools processing \textbf{2M+ records daily} from SecFin APIs with region-aware business dates (NA/EMEA/APAC), achieving 99.5\% data accuracy
-\item Developed gRPC integration gateway in Golang for UCM client management sync with 4-step API orchestration, implementing exponential backoff retries, pagination handling, and circuit breakers achieving \textbf{99.5\% sync success} across 500+ client hierarchies
+\item Architected Kafka-based event streaming pipeline in Golang/Java processing \textasciitilde \textbf{62K+ messages/sec} with goroutine worker pools, implementing effectively-once processing using Redis-backed idempotency for \textbf{\$50B+ daily} collateral movements.
+\item Developed distributed collateral optimization engine using \textbf{Temporal.io workflows} in Golang orchestrating 100+ fund optimizations with saga patterns and automatic failure recovery achieving \textasciitilde \textbf{97.6\% completion rate}.
+\item Optimized real-time financial dashboard with Redis caching in Golang reducing API latency from 500ms to \textasciitilde\textbf{70ms}, aggregating projected earnings and allocation efficiency metrics for \$50B+ AUM across 500+ funds.
+\item Architected Batch data pipeline with 20+ scheduled jobs using cron and goroutine worker pools processing \textbf{2M+ records daily} from SecFin APIs with region-aware business dates (NA/EMEA/APAC), achieving 99.5\% data accuracy.
+\item Developed gRPC integration gateway in Golang for UCM client management sync with 4-step API orchestration, implementing exponential backoff retries, pagination handling, and circuit breakers achieving \textasciitilde \textbf{99.5\% sync success} across 500+ client hierarchies.
 \end{tightemize}
 \sectionsep
 
@@ -102,22 +98,23 @@ Scalable System Design
 \location{Go, etcd, gRPC, Docker, Prometheus, Grafana | \href{https://github.com/Heman10x-NGU/nexuscache}{\bf GitHub}}
 \vspace{\topsep}
 \begin{tightemize}
-\item Architected distributed cache achieving \textbf{23K+ ops/sec with sub-ms P50 latency (713µs)} across 3-node cluster using consistent hashing (50 virtual nodes) and LRU eviction
-\item Implemented singleflight request coalescing using sync.Mutex+WaitGroup to \textbf{prevent cache stampedes}, deduplicating concurrent identical-key requests into single database calls
-\item Implemented automatic service discovery using etcd with lease-based health checks (10s TTL) enabling \textbf{dynamic node registration and automatic failover}
-\item Designed gRPC inter-node communication with Protocol Buffers; integrated Prometheus/Grafana exposing \textbf{real-time p50/p95/p99 latencies} and cache hit rates
+\item Architected distributed cache achieving \textbf{23K+ ops/sec with sub-ms P50 latency (713µs)} across 3-node cluster using consistent hashing (50 virtual nodes) and LRU eviction.
+\item Used singleflight package to \textbf{prevent thundering herd problem}, 
+deduplicating concurrent requests for identical keys into single database calls.
+\item Implemented automatic service discovery using etcd with lease-based health checks (10s TTL) enabling \textbf{dynamic node registration and automatic failover}.
+\item Designed gRPC inter-node communication with Protocol Buffers; integrated Prometheus/Grafana exposing \textbf{real-time p50/p95/p99 latencies} and cache hit rates.
 \end{tightemize}
 \sectionsep
-
+\vspace{0.4cm}
 \runsubsection{TitanQueue}
 \descript{| Distributed Task Queue}
 \location{Go, Redis, Docker | \href{https://github.com/Heman10x-NGU/titanqueue}{\bf GitHub}}
 \vspace{\topsep}
 \begin{tightemize}
-\item Built distributed task queue processing \textbf{40K+ tasks/sec enqueue and 6.7K tasks/sec} with 50-worker pool, implementing at-least-once delivery via 30-second lease-based task ownership
-\item Designed 7-component architecture (Processor, Forwarder, Recoverer, Heartbeater, Syncer, Subscriber, Janitor) enabling \textbf{automatic recovery of orphaned tasks within 60 seconds}
-\item Implemented weighted priority queue scheduling (critical:60\%, default:30\%, low:10\%) with \textbf{exponential backoff retry} (n² delays, 10 max attempts)
-\item Built TTL-based task deduplication using Redis SET NX \textbf{preventing duplicate processing}; integrated asynqmon web dashboard for real-time monitoring
+\item Built distributed task queue processing \textbf{40K+ tasks/sec enqueue and 6.7K tasks/sec} with 50-worker pool, implementing at-least-once delivery via 30-second lease-based task ownership.
+\item Designed 7-component architecture (Processor, Forwarder, Recoverer, Heartbeater, Syncer, Subscriber, Janitor) enabling. \textbf{automatic recovery of orphaned tasks within 60 seconds}.
+\item Implemented weighted priority queue scheduling (critical:60\%, default:30\%, low:10\%) with \textbf{exponential backoff retry} (n² delays, 10 max attempts).
+\item Built TTL-based task deduplication using Redis SET NX \textbf{preventing duplicate processing}; integrated monitoring dashboard for real-time queue and worker visibility.
 \end{tightemize}
 
 \end{minipage}
