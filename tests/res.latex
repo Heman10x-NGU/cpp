@@ -111,7 +111,7 @@ deduplicating concurrent requests for identical keys into single database calls.
 \location{Go, Redis, Docker | \href{https://github.com/Heman10x-NGU/titanqueue}{\bf GitHub}}
 \vspace{\topsep}
 \begin{tightemize}
-\item Built distributed task queue processing \textbf{40K+ tasks/sec enqueue and 6.7K tasks/sec} with 50-worker pool, implementing at-least-once delivery via 30-second lease-based task ownership.
+\item Built distributed task queue processing \textbf{46K+ tasks/sec enqueue rate} and \textbf{7K+ tasks/sec execution rate} with 50-worker pool, implementing at-least-once delivery via 30-second lease-based task ownership.
 \item Designed 7-component architecture (Processor, Forwarder, Recoverer, Heartbeater, Syncer, Subscriber, Janitor) enabling. \textbf{automatic recovery of orphaned tasks within 60 seconds}.
 \item Implemented weighted priority queue scheduling (critical:60\%, default:30\%, low:10\%) with \textbf{exponential backoff retry} (n² delays, 10 max attempts).
 \item Built TTL-based task deduplication using Redis SET NX \textbf{preventing duplicate processing}; integrated monitoring dashboard for real-time queue and worker visibility.
