@@ -1,0 +1,132 @@
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+% --------------------------------------
+%  HEADER
+% --------------------------------------
+\namesection{Hemant}{Kumar}{
+  \urlstyle{same}
+  \href{mailto:heman10x@gmail.com}{heman10x@gmail.com} | \textbf{+91 9664066261}
+}
+
+% --------------------------------------
+%  LEFT COLUMN
+% --------------------------------------
+\begin{minipage}[t]{0.32\textwidth} 
+\vspace{0pt}
+
+\section{Education}
+
+\subsection{Delhi Technological University (Delhi College of Engineering)}
+\descript{B.Tech in Computer Science}
+\location{2020 – 2024 | Delhi, India}
+\textbf{\textbf{CGPA: 8.46 / 10.0}}
+
+\sectionsep
+
+\section{Links}
+LinkedIn: \href{https://www.linkedin.com/in/heman10x/}{\bf heman10x} \\
+GitHub: \href{https://github.com/Heman10x-NGU}{\bf Heman10x-NGU} \\
+LeetCode: \href{https://leetcode.com/Heman10x/}{\bf Heman10x} \\
+\sectionsep
+
+\section{Technical Skills}
+
+\subsection{Languages}
+Python \textbullet{} Java \textbullet{} Golang \\
+JavaScript \textbullet{} TypeScript \textbullet{} C++
+\sectionsep
+
+\subsection{Frameworks}
+Django \textbullet{} HTML CSS \\
+Spring Boot \textbullet{} 
+React.js \textbullet{} Node.js \textbullet{} Express.js
+\sectionsep
+\vspace{1pt}
+\subsection{Tools \& Infrastructure}
+Kafka \textbullet{} Docker \textbullet{} Git \textbullet{} CI/CD  \textbullet{}
+WebSockets \textbullet{} Distributed Systems \textbullet{} gRPC \textbullet{}
+Redis \textbullet{} etcd \textbullet{}  Observability\textbullet{}
+Prometheus \textbullet{} Grafana \textbullet{} GenAI \textbullet{} 
+RESTful APIs \textbullet{} Microservices \textbullet{} Root Cause Analysis (RCA) \textbullet{} Architecture \textbullet{} Analytics
+\sectionsep
+\vspace{8pt}
+\subsection{Databases}
+MongoDB \textbullet{} PostgreSQL \textbullet{} MySQL
+\sectionsep
+
+\subsection{AI/ML}
+LLM Integration \textbullet{} Groq \textbullet{} Instructor \\
+Deepgram \textbullet{} Structured Outputs \textbullet{} AI Agentic Integration
+\sectionsep
+\vspace{8pt}
+\section{Achievements}
+\textbf{Rank 599} - LeetCode Weekly Contest 473 \\[3pt]
+\textbf{Specialist} - Codeforces (Rating: 1484+) \\[3pt]
+\textbf{622 Problems} - LeetCode (DSA) \\[3pt]
+\textbf{AIR 5,968} - JEE Mains 2020 (Top 0.5\%) \\[3pt]
+\textbf{1st Place} - BITS Pilani Hackathon (\$5k) \\[3pt]
+\textbf{1st Rank} - Web 3.0 Track, HACK GDSC 2.0 \\[3pt]
+\sectionsep
+
+
+
+\end{minipage}%
+\hfill
+% --------------------------------------
+%  RIGHT COLUMN
+% --------------------------------------
+\begin{minipage}[t]{0.66\textwidth} 
+\vspace{-8pt}
+
+\section{Work Experience}
+
+\runsubsection{Bank of New York Mellon}
+\descript{| Software Engineer}
+\location{July 2024 – Present (1.6 years) | Pune, India}
+\vspace{\topsep}
+\begin{tightemize}
+\item Implemented Spring Boot CompletableFuture-based collateral optimization engine \textbf{used by top-5 systematic HFT firms including leading market makers and quantitative funds}, with 4-stage pipeline handling \textbf{100+ fund optimizations daily} across \textbf{\$50B+ AUM} achieving ~\textbf{97\% success rate}.
+\item Developed IBM MQ integration for trade/transfer operations with dual ACK/NACK processing and parent-child transaction orchestration, handling \textbf{50K+ daily messages} with automated retry mechanisms and dead-letter queue management.
+\item Built Universal Client Management sync service \textbf{serving tier-1 institutional prime brokerage clients}, orchestrating 4-step API integration with exponential backoff retries and batch processing, synchronizing \textbf{500+ client hierarchies} across multiple regions with comprehensive error logging.
+\item Optimized real-time financial dashboard APIs \textbf{powering high-frequency algorithmic trading workflows}, aggregating earnings and allocation metrics across \textbf{\$50B+ AUM}, reducing API latency from 500ms to \textasciitilde\textbf{80ms} through JPA query optimization, Redis caching, and database indexing strategies.
+\item Deployed scheduled data sync services integrating external financial APIs with region-aware business date handling, multithreaded processing, and automated failure alerting for \textbf{2M+ daily records} supporting quantitative trading operations.
+\end{tightemize}
+\sectionsep
+\vspace{-8pt}
+\section{Projects}
+
+\runsubsection{PhronAI}
+\descript{| Voice-to-Architecture AI Agent}
+\location{Python, Django, Pydantic, React, Groq, Deepgram | \href{https://github.com/Heman10x-NGU/PhronAi}{\bf GitHub} | \href{https://phron-ai.vercel.app/}{\bf Live Link}}
+\vspace{\topsep}
+\begin{tightemize}
+
+\item Architected real-time AI agent using Django Channels (ASGI) and WebSockets processing streaming audio with \textbf{sub-3-second end-to-end latency} from voice input to rendered system architecture diagrams
+\item Integrated schema-validated LLM actions using Pydantic + Instructor (Groq LLaMA), rejecting/repairing invalid generations before execution to achieve \textbf{near-100\% valid} structured outputs in testing.
+\item Built streaming speech-to-text integration with Deepgram Nova-2 API achieving \textbf{~300ms transcription latency} with real-time audio chunk processing over WebSocket connections
+\item Designed event-driven backend architecture with Django Channels and Redis channel layers handling concurrent WebSocket sessions with automatic message routing and session management
+\item Deployed on Render (Daphne/ASGI) with Supabase Auth + Upstash Redis; added health checks and basic uptime monitoring, achieving \textbf{near-99\% availability} during monitored active-user periods on free-tier hosting.
+\end{tightemize}
+\sectionsep
+\vspace{-10pt}
+
+\runsubsection{NexusCache}
+\descript{| Distributed Caching System}
+\location{Go, etcd, gRPC, Docker, Prometheus, Grafana | \href{https://github.com/Heman10x-NGU/nexuscache}{\bf GitHub}}
+\vspace{\topsep}
+\begin{tightemize}
+\item Architected distributed cache achieving \textbf{23K+ ops/sec with sub-ms P50 latency (713µs)} across 3-node cluster using consistent hashing (50 virtual nodes) and LRU eviction.
+\item Used singleflight package to \textbf{prevent thundering herd problem}, 
+deduplicating concurrent requests for identical keys into single database calls.
+\item Configured automatic service discovery using etcd with lease-based health checks (10s TTL) enabling \textbf{dynamic node registration and automatic failover}.
+\item Designed gRPC inter-node communication with Protocol Buffers; integrated Prometheus/Grafana exposing \textbf{real-time p50/p95/p99 latencies} and cache hit rates.
+\end{tightemize}
+
+\end{minipage}
+\end{document}
